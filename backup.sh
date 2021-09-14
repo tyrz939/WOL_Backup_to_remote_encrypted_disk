@@ -29,7 +29,7 @@ ssh $USERNAME@$HOST << EOF
 EOF
 
 echo "Run rsync"
-rsync -avzr --delete -P -e ssh $BACKUP_PATH $USERNAME@$HOST:/media/backup3tb/Stuff
+rsync -avzr --delete -P -e ssh $BACKUP_PATH $USERNAME@$HOST:/media/backup_hdd
 
 echo "Unmount the drive"
 ssh $USERNAME@$HOST << EOF
