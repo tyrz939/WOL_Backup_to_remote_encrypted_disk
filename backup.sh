@@ -29,6 +29,7 @@ ssh $USERNAME@$HOST << EOF
 EOF
 
 echo "Run rsync"
+#CHANGE TO SUIT YOUR SETUP
 rsync -avzr --delete -P -e ssh $BACKUP_PATH $USERNAME@$HOST:/media/backup_hdd
 
 echo "Unmount the drive"
